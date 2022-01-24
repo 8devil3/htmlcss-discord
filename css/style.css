@@ -32,6 +32,10 @@ ul {
     max-width: 1152px;
 }
 
+.txt-center {
+    text-align: center;
+}
+
 .jstf {
     text-align: justify;
 }
@@ -49,6 +53,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: #7289DA;
 }
 
 a:hover {
@@ -92,9 +97,7 @@ p {
     text-align: left;
 }
 
-.txt-center {
-    text-align: center;
-}
+
 
 
 /*######### NAVIGAZIONE + HERO #########*/
@@ -109,7 +112,6 @@ p {
 
 header {
     padding: 1.5rem 0;
-    color: #fff;
     font-weight: 600;
     font-size: 0;
 }
@@ -133,10 +135,6 @@ header nav a {
     padding: 0 1.5rem;
     text-transform: capitalize;
     font-size: 1rem;
-    color: #fff;
-}
-
-header nav a:hover {
     color: #fff;
 }
 
@@ -168,7 +166,7 @@ main section:nth-of-type(2n+2) {
 }
 
 main .sect-img-box {
-    max-width: 700px;
+    max-width: calc(1152px - 300px);
     vertical-align: top;
     display: inline-block;
 }
@@ -221,10 +219,6 @@ footer nav a {
     color: #fff;
 }
 
-footer nav a:hover {
-    color: #fff;
-}
-
 footer .content:last-child {
     border-top: 1px #7289DA solid;
     margin-top: 4rem;
@@ -240,8 +234,8 @@ footer form {
 
 footer select option, footer select {
     background-color: #23272A;
-    color: #fff;
     border: 0;
+    color: #fff;
 }
 
 footer form img {
@@ -251,9 +245,9 @@ footer form img {
 
 footer .social a {
     font-size: 1.2rem;
-    color: #fff;
     transition: 0.3s;
     margin-right: 1.2rem;
+    color: #fff;
 }
 
 footer .social a:hover {
@@ -288,7 +282,6 @@ footer .social a:hover {
 .btn {
     margin: 1rem;
     padding: 0.8rem 2rem;
-    border: 0;
     border-radius: 100px;
     display: inline-block;
     color: #fff;
@@ -301,12 +294,10 @@ footer .social a:hover {
     box-shadow: 0 8px 16px rgb(0, 0, 0, 0.2);
     text-decoration: none;
     filter: brightness(120%);
-    color: #fff;
 }
 
 .btn-signin {
     padding: 0.5rem 1rem;
-    border: 0;
     border-radius: 100px;
     font-size: 1rem;
     color: #23272A;
