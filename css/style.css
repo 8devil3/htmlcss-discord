@@ -8,11 +8,10 @@
 
 ul {
     list-style: none;
-    font-size: 0;
 }
 
 :root {
-    font-family: "Roboto", sans-serif;
+    font-family: "Arimo", sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #23272A;
@@ -20,7 +19,8 @@ ul {
 
 
 
-/* elementi comuni*/
+
+/*######### ELEMENTI COMUNI #########*/
 
 .v-center{
     vertical-align: middle;
@@ -28,7 +28,7 @@ ul {
 
 .content {
     margin: 0 auto;
-    max-width: 1024px;
+    max-width: 1152px;
 }
 
 .jstf {
@@ -43,7 +43,8 @@ ul {
 
 
 
-/* tipografia */
+
+/*######### TIPOGRAFIA #########*/
 
 a {
     text-decoration: none;
@@ -53,27 +54,28 @@ a:hover {
     text-decoration: underline;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    text-align: left;
+}
+
 h1 {
     font-size: 3rem;
     margin-bottom: 2.5rem;
-    font-weight: 700;
 }
 
 h2 {
     font-size: 2.75rem;
     margin-bottom: 2rem;
-    font-weight: 700;
+    line-height: 1.2;
 }
 
 h3 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    font-weight: 700;
 }
 
 h4, footer h5 {
     color: #7289DA;
-    font-weight: 600;
 }
 
 h4 {
@@ -81,18 +83,25 @@ h4 {
 }
 
 h5 {
+    font-size: 1.1rem;
+}
+
+p {
     font-size: 1.2rem;
+    text-align: left;
+}
+
+.txt-center {
+    text-align: center;
 }
 
 
-
-/* intestazione e navigazione */
+/*######### NAVIGAZIONE + HERO #########*/
 
 .top-container {
     background-image: url("../img/jumbo.png");
     background-size: cover;
     background-position: center;
-    height: 70vh;
     color: #fff;
     text-align: center;
 }
@@ -100,6 +109,8 @@ h5 {
 header {
     padding: 1.5rem 0;
     color: #fff;
+    font-weight: 600;
+    font-size: 0;
 }
 
 .logo {
@@ -117,8 +128,7 @@ header ul, header li {
     display: inline-block;
 }
 
-header a {
-    display: inline-block;
+header nav a {
     padding: 0 1.5rem;
     text-transform: capitalize;
     font-size: 1rem;
@@ -129,34 +139,20 @@ header nav a:hover {
     color: #fff;
 }
 
-.btn-header {
-    padding: 0.5rem 1rem;
-    border: 0;
-    border-radius: 100px;
-    color: #23272A;
-    background-color: #fff;
-    transition: 0.3s;
-}
-
-.btn-header:hover {
-    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
-    text-decoration: none;
-    color: #5865f2;
-}
-
 .hero {
-    padding: 0;
+    padding: 3rem 0;
 }
 
 .box-hero {
-    max-width: 600px;
+    width: 600px;
     text-align: center;
-    margin: 5rem auto 2rem auto;
+    margin: 0 auto 1rem auto;
 }
 
 
 
-/* main */
+
+/*######### MAIN #########*/
 
 main {
     font-size: 0;
@@ -167,46 +163,107 @@ section {
     line-height: 1.5;
 }
 
-section:nth-of-type(2n+2) {
+main section:nth-of-type(2n+2) {
     background-color: #efefef;
 }
 
-section:last-of-type {
-    text-align: center;
+main .sect-img-box {
+    max-width: 700px;
+    vertical-align: top;
+    display: inline-block;
 }
 
-section .content::after {
-    content: "";
-    display: table;
-    clear: both;
+main .sect-img-box img {
+    object-fit: contain;
+    width: 100%;
 }
 
-.f-left {
-    float: left;
-}
-
-.f-right {
-    float: right;
-}
-
-.sect-img-box {
-    width: 50%;
-}
-
-.sect-txt {
-    width: 30%;
+main .sect-txt {
+    width: 300px;
     padding-top: 2rem;
-    font-size: 1rem;
-    text-align: left;
+    display: inline-block;
+    vertical-align: top;
 }
 
-.img-big {
+main .img-big {
     width: 100%;
 }
 
 
 
-/* decorazioni */
+
+/*######### FOOTER #########*/
+
+footer {
+    background-color: #23272A;
+    padding: 5rem 0;
+    font-size: 0;
+}
+
+.social-lang-box {
+    width: 240px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+footer nav {
+    display: inline-block;
+    vertical-align: top;
+}
+
+footer nav ul {
+    font-size: 1rem;
+}
+
+footer nav a {
+    display: block;
+    padding-top: 1rem;
+    color: #fff;
+}
+
+footer nav a:hover {
+    color: #fff;
+}
+
+footer .content:last-child {
+    border-top: 1px #7289DA solid;
+    margin-top: 4rem;
+    padding-top: 2rem;
+}
+
+
+/* footer form e social */
+
+footer form {
+    margin: 1.2rem 0;
+}
+
+footer select option, footer select {
+    background-color: #23272A;
+    color: #fff;
+    border: 0;
+}
+
+footer form img {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+footer .social a {
+    font-size: 1.2rem;
+    color: #fff;
+    transition: 0.3s;
+    margin-right: 1.2rem;
+}
+
+footer .social a:hover {
+    color: #8EA1E1;
+}
+
+
+
+
+/*######### DECORAZIONI #########*/
 
 .wave path, .wave-reverse path {
     fill: #efefef;
@@ -223,7 +280,10 @@ section .content::after {
 
 
 
-/* main pulsanti */
+
+/*######### PULSANTI #########*/
+
+/* header pulsanti */
 
 .btn {
     margin: 1rem;
@@ -233,14 +293,30 @@ section .content::after {
     display: inline-block;
     color: #fff;
     font-size: 1.2rem;
+    font-weight: 600;
     transition: 0.3s;
 }
 
-.btn:hover {
+.btn:hover, .btn-signin:hover, .footer-btn:hover {
     box-shadow: 0 8px 16px rgb(0, 0, 0, 0.2);
     text-decoration: none;
     filter: brightness(120%);
     color: #fff;
+}
+
+.btn-signin {
+    padding: 0.5rem 1rem;
+    border: 0;
+    border-radius: 100px;
+    font-size: 1rem;
+    color: #23272A;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.btn-signin:hover {
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+    color: #5865f2;
 }
 
 .btn .fas {
@@ -264,54 +340,6 @@ section .content::after {
     background-color: #5865f2;
 }
 
-
-
-
-/* footer */
-
-footer {
-    background-color: #23272A;
-    padding: 5rem 0;
-    font-size: 0;
-}
-
-.social-lang-box {
-    width: 300px;
-    display: inline-block;
-    vertical-align: top;
-}
-
-footer nav {
-    display: inline-block;
-    vertical-align: top;
-    width: calc((100% - 300px) / 4);
-}
-
-footer .content:last-child {
-    border-top: 1px #7289DA solid;
-    margin-top: 4rem;
-    padding-top: 2rem;
-}
-
-footer nav ul {
-    font-size: 1rem;
-}
-
-footer nav a {
-    display: block;
-    padding-top: 1rem;
-    color: #fff;
-}
-
-footer nav a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-
-
-/* footer pulsanti */
-
 .footer-btn {
     color: #fff;
     background-color: #8EA1E1;
@@ -322,40 +350,5 @@ footer nav a:hover {
 }
 
 .footer-btn:hover {
-    text-decoration: none;
-    color: #fff;
-    filter: brightness(120%);
     box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
-}
-
-
-
-/* footer form e social */
-
-footer form {
-    margin: 1rem 0;
-}
-
-footer select option, footer select {
-    background-color: #23272A;
-    color: #fff;
-    border: 0;
-    vertical-align: middle;
-}
-
-footer form img {
-    width: 1.5rem;
-    margin-right: 0.5rem;
-    vertical-align: middle;
-}
-
-footer .social a {
-    font-size: 1.2rem;
-    color: #fff;
-    transition: 0.3s;
-    margin-right: 1.2rem;
-}
-
-footer .social a:hover {
-    color: #8EA1E1;
 }
