@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+ul {
+    list-style: none;
+}
+
 :root {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -14,28 +18,33 @@
 }
 
 
+
+/* tipografia */
+
 a {
     text-decoration: none;
-    color: #23272A;
 }
 
 a:hover {
     text-decoration: underline;
-    color: #23272A;
 }
 
 h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
     margin-bottom: 2.5rem;
     font-weight: 700;
-    line-height: normal;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 2.75rem;
     margin-bottom: 2rem;
     font-weight: 700;
-    line-height: normal;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
 }
 
 .fas {
@@ -74,36 +83,30 @@ header a:last-child {
 }
 
 
-nav {
+header nav {
     display: inline-block;
 }
 
-nav ul {
-    list-style: none;
+header nav ul {
     display: inline-block;
-    font-size: 0;
+    /* font-size: 0; */
 }
 
-nav li {
+header nav a {
     display: inline-block;
-}
-
-nav a {
     padding: 0 1.5rem;
     text-transform: capitalize;
     font-size: 1rem;
     color: #fff;
 }
 
-nav a:hover {
+header nav a:hover {
     color: #fff;
 }
 
 
 
-
-
-/* layout */
+/* contenuto */
 
 /* main {
     font-size: 0;
@@ -114,13 +117,31 @@ section {
     line-height: 1.5;
 }
 
-section:nth-of-type(odd) {
+section:nth-of-type(2n+3) {
     background-color: #ccc;
 }
 
 .content {
     margin: 0 auto;
-    max-width: 1280px;
+    max-width: 1024px;
+}
+
+section:first-of-type {
+    background-image: url("../img/jumbo.png");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    color: #fff;
+    text-align: center;
+}
+
+.box-hero {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+section:last-of-type {
     text-align: center;
 }
 
@@ -129,6 +150,7 @@ section .content::after {
     display: table;
     clear: both;
 }
+
 
 .f-left {
     float: left;
@@ -149,12 +171,8 @@ section .content::after {
     text-align: left;
 }
 
-.wave path, .wave-reverse path {
-    fill: #ccc;
-}
-
-.wave-reverse {
-    transform: rotate(180deg);
+.img-big {
+    width: 100%;
 }
 
 .v-center{
@@ -163,47 +181,33 @@ section .content::after {
 
 
 
-/* contenuto*/
+/* decorazioni */
 
-.sect-1 {
-    background-image: url("../img/jumbo.png");
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
+.wave path, .wave-reverse path {
+    fill: #ccc;
 }
 
-.box-hero {
-    max-width: 600px;
-    text-align: center;
-    margin: 0 auto;
+.wave-reverse {
+    transform: rotate(180deg);
 }
 
-
-
-.sect-2 {
-    /* background-image: url(../img/wave.svg);
-    background-size: 100% 10%;
-    background-repeat: no-repeat;
-    background-position: bottom; */
-    color: #23272A;
+.stars-deco {
+    height: 2.5rem;
+    margin-bottom: -1.1rem;
 }
 
 
 
-
-
-
-
-/* pulsanti */
+/* pulsanti contenuto*/
 
 .btn {
+    margin: 1rem;
     padding: 0.8rem 2rem;
     border: 0;
     border-radius: 100px;
     display: inline-block;
     color: #fff;
     font-size: 1.2rem;
-    margin: 0 1rem;
     transition: 0.3s;
 }
 
@@ -232,8 +236,101 @@ section .content::after {
 }
 
 
+
+
 /* footer */
 
 footer {
-    background-color: blue;
+    background-color: #23272A;
+    padding: 5rem 0;
+    font-size: 0;
+}
+
+.social-lang-box {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+footer nav {
+    display: inline-block;
+    vertical-align: top;
+    width: calc((100% - 300px) / 4);
+}
+
+footer h4, footer h5 {
+    color: #7289DA;
+    font-weight: 600;
+}
+
+footer h4 {
+    font-size: 2rem;
+}
+
+footer h5 {
+    font-size: 1.2rem;
+}
+
+footer .content:last-child {
+    border-top: 1px #7289DA solid;
+    margin-top: 4rem;
+}
+
+footer nav ul {
+    font-size: 1rem;
+}
+
+footer nav a {
+    display: block;
+    padding-top: 1rem;
+    color: #fff;
+}
+
+footer nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer-btn {
+    color: #fff;
+    background-color: #8EA1E1;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+    transition: 0.3s;
+    border-radius: 100px;
+}
+
+.footer-btn:hover {
+    text-decoration: none;
+    color: #fff;
+    filter: brightness(120%);
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+}
+
+footer form {
+    margin: 1rem 0;
+}
+
+footer select option, footer select {
+    background-color: #23272A;
+    color: #fff;
+    border: 0;
+    vertical-align: middle;
+}
+
+footer form img {
+    width: 1.5rem;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+footer .social a {
+    font-size: 1.2rem;
+    color: #fff;
+    transition: 0.3s;
+    margin-right: 1.2rem;
+}
+
+footer .social a:hover {
+    color: #8EA1E1;
 }
