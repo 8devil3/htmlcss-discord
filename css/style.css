@@ -8,6 +8,7 @@
 
 ul {
     list-style: none;
+    font-size: 0;
 }
 
 :root {
@@ -15,6 +16,29 @@ ul {
     font-size: 16px;
     font-weight: 400;
     color: #23272A;
+}
+
+
+
+/* elementi comuni*/
+
+.v-center{
+    vertical-align: middle;
+}
+
+.content {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+.jstf {
+    text-align: justify;
+}
+
+.jstf::after {
+    content: "";
+    width: 100%;
+    display: inline-block;
 }
 
 
@@ -47,52 +71,53 @@ h3 {
     font-weight: 700;
 }
 
-.fas {
-    margin-right: 0.75rem;
+h4, footer h5 {
+    color: #7289DA;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 2rem;
+}
+
+h5 {
+    font-size: 1.2rem;
 }
 
 
 
 /* intestazione e navigazione */
 
-header {
-    padding: 1.5rem 0;
-    background-color: #3161E0;
+.top-container {
+    background-image: url("../img/jumbo.png");
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
     color: #fff;
-}
-
-header > div {
-    margin: 0 auto;
-    max-width: 1280px;
     text-align: center;
 }
 
-header > div::after {
-    content: "";
-    display: table;
-    clear: both;
+header {
+    padding: 1.5rem 0;
+    color: #fff;
 }
 
 .logo {
-    width: 128px;
-    float: left;
+    font-size: 0;
+    max-width: 8rem;
+    display: inline-block;
+    padding: 0;
 }
-
-header a:last-child {
-    float: right;
-}
-
 
 header nav {
     display: inline-block;
 }
 
-header nav ul {
+header ul, header li {
     display: inline-block;
-    /* font-size: 0; */
 }
 
-header nav a {
+header a {
     display: inline-block;
     padding: 0 1.5rem;
     text-transform: capitalize;
@@ -104,41 +129,46 @@ header nav a:hover {
     color: #fff;
 }
 
+.btn-header {
+    padding: 0.5rem 1rem;
+    border: 0;
+    border-radius: 100px;
+    color: #23272A;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+.btn-header:hover {
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+    text-decoration: none;
+    color: #5865f2;
+}
+
+.hero {
+    padding: 0;
+}
+
+.box-hero {
+    max-width: 600px;
+    text-align: center;
+    margin: 5rem auto 2rem auto;
+}
 
 
-/* contenuto */
 
-/* main {
+/* main */
+
+main {
     font-size: 0;
-} */
+}
 
 section {
     padding: 5rem 0;
     line-height: 1.5;
 }
 
-section:nth-of-type(2n+3) {
-    background-color: #ccc;
-}
-
-.content {
-    margin: 0 auto;
-    max-width: 1024px;
-}
-
-section:first-of-type {
-    background-image: url("../img/jumbo.png");
-    background-size: cover;
-    background-position: center;
-    height: 50vh;
-    color: #fff;
-    text-align: center;
-}
-
-.box-hero {
-    max-width: 600px;
-    text-align: center;
-    margin: 0 auto;
+section:nth-of-type(2n+2) {
+    background-color: #efefef;
 }
 
 section:last-of-type {
@@ -150,7 +180,6 @@ section .content::after {
     display: table;
     clear: both;
 }
-
 
 .f-left {
     float: left;
@@ -175,16 +204,12 @@ section .content::after {
     width: 100%;
 }
 
-.v-center{
-    vertical-align: middle;
-}
-
 
 
 /* decorazioni */
 
 .wave path, .wave-reverse path {
-    fill: #ccc;
+    fill: #efefef;
 }
 
 .wave-reverse {
@@ -198,7 +223,7 @@ section .content::after {
 
 
 
-/* pulsanti contenuto*/
+/* main pulsanti */
 
 .btn {
     margin: 1rem;
@@ -216,6 +241,10 @@ section .content::after {
     text-decoration: none;
     filter: brightness(120%);
     color: #fff;
+}
+
+.btn .fas {
+    margin-right: 0.75rem;
 }
 
 .btn-light {
@@ -258,22 +287,10 @@ footer nav {
     width: calc((100% - 300px) / 4);
 }
 
-footer h4, footer h5 {
-    color: #7289DA;
-    font-weight: 600;
-}
-
-footer h4 {
-    font-size: 2rem;
-}
-
-footer h5 {
-    font-size: 1.2rem;
-}
-
 footer .content:last-child {
     border-top: 1px #7289DA solid;
     margin-top: 4rem;
+    padding-top: 2rem;
 }
 
 footer nav ul {
@@ -291,6 +308,10 @@ footer nav a:hover {
     text-decoration: underline;
 }
 
+
+
+/* footer pulsanti */
+
 .footer-btn {
     color: #fff;
     background-color: #8EA1E1;
@@ -306,6 +327,10 @@ footer nav a:hover {
     filter: brightness(120%);
     box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
 }
+
+
+
+/* footer form e social */
 
 footer form {
     margin: 1rem 0;
