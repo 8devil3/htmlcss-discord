@@ -7,41 +7,39 @@
 }
 
 :root {
-    font-family: "Arial", sans-serif;
-    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
     font-weight: 400;
-    color: black;
+    color: #23272A;
 }
 
-@font-face{
-    font-family:Ginto Normal;font-weight:400;src:url(https://discord.com/assets/57e5e55cf0143736ceab51ac0a9ebb54.woff2) format("woff2"),url(https://discord.com/assets/32c4f766e4892c054dfd367dbe0fc6dc.woff) format("woff")
-}
 
-@font-face{
-    font-family:Ginto Normal;font-weight:500;src:url(https://discord.com/assets/e215f61cbbc2e49cea6121e0d2679aa2.woff2) format("woff2"),url(https://discord.com/assets/88055567e3d928bcb1e67e967081572e.woff) format("woff")
-}
-
-@font-face{
-    font-family:Ginto Normal;font-weight:700;src:url(https://discord.com/assets/1cce82154216dc3cb04a84d011ce1201.woff2) format("woff2"),url(https://discord.com/assets/746a4f241e03deffc59b08c5650cf458.woff) format("woff")
-}
-
-@font-face{
-    font-family:Ginto Nord;font-weight:800;src:url(https://discord.com/assets/ae7c84783ad48b6d1c8e2bfbe707e0d4.woff2) format("woff2"),url(https://discord.com/assets/92e32db984c8577d8b81548b43b9c061.woff) format("woff")
-}
-
-a, a:hover {
+a {
     text-decoration: none;
-    color: white;
-    transition: color 0.3s;
+    color: #23272A;
 }
 
 a:hover {
-    color: rgb(34, 100, 155);
+    text-decoration: underline;
+    color: #23272A;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3.2rem;
     margin-bottom: 2.5rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.fas {
+    margin-right: 0.75rem;
 }
 
 
@@ -49,66 +47,171 @@ h1 {
 /* intestazione e navigazione */
 
 header {
-    background-color: rgb(27, 102, 199);
+    padding: 1.5rem 0;
+    background-color: #3161E0;
+    color: #fff;
 }
 
-nav {
+header > div {
     margin: 0 auto;
     max-width: 1280px;
+    text-align: center;
+}
+
+header > div::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.logo {
+    width: 128px;
+    float: left;
+}
+
+header a:last-child {
+    float: right;
+}
+
+
+nav {
+    display: inline-block;
 }
 
 nav ul {
     list-style: none;
+    display: inline-block;
+    font-size: 0;
+}
+
+nav li {
+    display: inline-block;
 }
 
 nav a {
-    display: inline-block;
-    padding: 1.5rem 0.5rem;
+    padding: 0 1.5rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    color: #fff;
 }
+
+nav a:hover {
+    color: #fff;
+}
+
+
 
 
 
 /* layout */
 
+/* main {
+    font-size: 0;
+} */
+
 section {
-    height: 100vh;
-    padding: 4rem 0;
+    padding: 5rem 0;
+    line-height: 1.5;
 }
 
-section::after {
-    content: "";
-    background-image: url("../img/immagine.svg");
+section:nth-of-type(odd) {
+    background-color: #ccc;
 }
 
-.h-center {
+.content {
     margin: 0 auto;
     max-width: 1280px;
+    text-align: center;
 }
 
-.img-box {
-    height: 100%;
+section .content::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.f-left {
+    float: left;
+}
+
+.f-right {
+    float: right;
+}
+
+.sect-img-box {
     width: 50%;
-    margin-right: 4rem;
 }
 
-img {
-    height: 100%;
-    object-fit: cover;
+.sect-txt {
+    width: 30%;
+    padding-top: 2rem;
+    font-size: 1rem;
+    text-align: left;
 }
+
+.wave path, .wave-reverse path {
+    fill: #ccc;
+}
+
+.wave-reverse {
+    transform: rotate(180deg);
+}
+
+.v-center{
+    vertical-align: middle;
+}
+
+
+
+/* contenuto*/
+
+.sect-1 {
+    background-image: url("../img/jumbo.png");
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+}
+
+.box-hero {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+.sect-2 {
+    /* background-image: url(../img/wave.svg);
+    background-size: 100% 10%;
+    background-repeat: no-repeat;
+    background-position: bottom; */
+    color: #23272A;
+}
+
+
+
+
+
 
 
 /* pulsanti */
 
 .btn {
-    padding: 1rem;
+    padding: 0.8rem 2rem;
     border: 0;
-    border-radius: 50%;
+    border-radius: 100px;
     display: inline-block;
-    font-family: "Whitney", sans-serif;
+    color: #fff;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+    transition: 0.3s;
 }
 
 .btn:hover {
     box-shadow: 0 8px 16px rgb(0, 0, 0, 0.2);
+    text-decoration: none;
+    filter: brightness(120%);
+    color: #fff;
 }
 
 .btn-light {
@@ -116,16 +219,17 @@ img {
     color: #000;
 }
 
+.btn-light:hover {
+    color: #5865f2;
+}
+
 .btn-dark {
     background-color: #1a1a1a;
-    color: #fff;
 }
 
 .btn-violet {
-    background-color: #7566ff;
-    color: #fff;
+    background-color: #5865f2;
 }
-
 
 
 /* footer */
